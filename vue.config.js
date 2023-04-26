@@ -7,7 +7,6 @@ const postcss = px2rem({
   remUnit: 192, // 设计稿尺寸1920/10
 });
 module.exports = {
- outputDir:"docs",
  chainWebpack: (config) => {
      config.module
     .rule("css")
@@ -30,6 +29,7 @@ module.exports = {
   },
 }
 module.exports = defineConfig({
+  outputDir:"docs",
   transpileDependencies: true,
   productionSourceMap: false
 })
