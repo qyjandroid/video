@@ -30,5 +30,6 @@ module.exports = {
 }
 module.exports = defineConfig({
   transpileDependencies: true,
-  productionSourceMap: false
+  productionSourceMap: false,
+  publicPath:"/video/"
 })
