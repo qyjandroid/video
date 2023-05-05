@@ -11,44 +11,44 @@ import { Heart } from '@/utils/model';
 export default {
   name: 'App',
   created () {
-    (function () {
-      // 在不刷新页面的情况下，只执行一次爱心跳动效果
-      // 加载爱心跳动效果
-      setTimeout(async () => {
-        let main = document.querySelector('.el-main')
-        console.log(
-          main.clientWidth,
-          main.clientHeight,
-          main.getBoundingClientRect().left,
-          main.getBoundingClientRect().top
-        )
-        await Heart()
-        // 伪数组
-        let ele = document.querySelectorAll('body canvas')
-        Array.from(ele).forEach((item) => {
-          console.log(item.id)
-          if (item.id !== 'canvas_sakura') {
-            item.style.position = 'absolute'
-            // 全屏显示
-            item.style.top = 0
-            item.style.left = 0
-            item.style.zIndex = 1
-            // 动态添加类名，方便后面移除
-            item.classList.add('model')
-          }
-        })
-      }, 2800)
-      // 移除爱心跳动效果
-      setTimeout(() => {
-        let eles = document.querySelectorAll('body .model')
-        Array.from(eles).forEach((item) => {
-          console.log(item.className)
-          if (item.className === 'model') {
-            item.style.display = 'none'
-          }
-        })
-      }, 7800)
-    })();
+    // (function () {
+    //   // 在不刷新页面的情况下，只执行一次爱心跳动效果
+    //   // 加载爱心跳动效果
+    //   setTimeout(async () => {
+    //     let main = document.querySelector('.el-main')
+    //     console.log(
+    //       main.clientWidth,
+    //       main.clientHeight,
+    //       main.getBoundingClientRect().left,
+    //       main.getBoundingClientRect().top
+    //     )
+    //     await Heart()
+    //     // 伪数组
+    //     let ele = document.querySelectorAll('body canvas')
+    //     Array.from(ele).forEach((item) => {
+    //       console.log(item.id)
+    //       if (item.id !== 'canvas_sakura') {
+    //         item.style.position = 'absolute'
+    //         // 全屏显示
+    //         item.style.top = 0
+    //         item.style.left = 0
+    //         item.style.zIndex = 1
+    //         // 动态添加类名，方便后面移除
+    //         item.classList.add('model')
+    //       }
+    //     })
+    //   }, 2800)
+    //   // 移除爱心跳动效果
+    //   setTimeout(() => {
+    //     let eles = document.querySelectorAll('body .model')
+    //     Array.from(eles).forEach((item) => {
+    //       console.log(item.className)
+    //       if (item.className === 'model') {
+    //         item.style.display = 'none'
+    //       }
+    //     })
+    //   }, 7800)
+    // })();
     
     // 核心价值！
     (function () {
